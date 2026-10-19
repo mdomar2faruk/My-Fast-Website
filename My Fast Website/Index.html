@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <title>Fresh Fish Shop</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- নতুন হেডার সেকশনের CSS --- */
+        .main-header {
+            background-color: #ffffff;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 98%;
+            max-width: 100%;
+            margin: 10px auto;
+            border-radius: 8px;
+            box-sizing: border-box;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-logo img {
+            height: 45px;
+            width: auto;
+            display: block;
+        }
+
+        .header-search-container {
+            display: flex;
+            align-items: center;
+            border: 2px solid #00c853; 
+            border-radius: 50px; 
+            overflow: hidden;
+            background-color: #fff;
+            width: 45%;
+            max-width: 600px;
+        }
+
+        .search-category-select {
+            border: none;
+            outline: none;
+            padding: 10px 15px;
+            font-size: 14px;
+            color: #666;
+            background-color: #f9f9f9;
+            border-right: 1px solid #ddd;
+            cursor: pointer;
+        }
+
+        .header-search-input {
+            border: none;
+            outline: none;
+            padding: 10px 15px;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        .header-search-btn {
+            border: none;
+            background: none;
+            padding: 10px 20px;
+            color: #00c853;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .action-item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            font-size: 12px;
+            font-family: Arial, sans-serif;
+            cursor: pointer;
+        }
+
+        .action-item i {
+            font-size: 20px;
+            color: #00c853; 
+            margin-bottom: 4px;
+        }
+
+        .action-badge {
+            position: absolute;
+            top: -8px;
+            right: 10px;
+            background-color: #00c853;
+            color: #fff;
+            font-size: 10px;
+            font-weight: bold;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #d01b1b;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <header class="main-header">
+        
+        <div class="header-logo">
+            <img src="frsh"> </div>
+
+        <div class="header-search-container">
+            <select class="search-category-select">
+                <option>সকল ক্যাটাগরি</option>
+                <option>মাছ</option>
+                <option>মাংস</option>
+                <option>সবজি</option>
+            </select>
+            <input type="text" class="header-search-input" placeholder="আইটেম অনুসন্ধান করুন...">
+            <button class="header-search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <div class="header-actions">
+            
+            <a href="compare.html" class="action-item">
+                <span class="action-badge">0</span>
+                <i class="fa-solid fa-arrows-rotate"></i>
+                <span>তুলনা করুন</span>
+            </a>
+
+            <a href="wishlist.html" class="action-item">
+                <span class="action-badge">0</span>
+                <i class="fa-regular fa-heart"></i>
+                <span>পছন্দের তালিকা</span>
+            </a>
+
+            <a href="cart.html" class="action-item">
+                <span class="action-badge">0</span>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>কার্ট</span>
+            </a>
+
+<a href="login.html" class="action-item">
+    <i class="fa-regular fa-user"></i>
+    <span>অ্যাকাউন্ট</span>
+</a>
+
+        </div>
+    </header>
+
+        </div>
+
+        
+    </header>
+    
+
+      
+    </div>
+
+</body>
+
+</html>
+
+<style>
+        /* ==========================================================================
+           ১. নতুন হেডার সেকশনের CSS
+           ========================================================================== */
+        .main-header {
+            background-color: #f9f6f6;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width:88%;
+            margin: 10px auto;
+            border-radius: 8px;
+            box-sizing: border-box;
+            box-shadow: 0px 1px rgb(109, 108, 108);
+        }
+
+        /* লোগো অংশ */
+        .header-logo img {
+            height: 50px;
+            width: auto;
+            display: block;
+        }
+
+        /* সার্চ বার কন্টেইনার */
+        .header-search-container {
+            display: flex;
+            align-items: center;
+            border: 2px solid #eaefec; /* থিম কালার সবুজ */
+            border-radius: 100px; /* সম্পূর্ণ গোল সার্চ বার */
+            overflow: hidden;
+            background-color: #414042;
+            width: 50%;
+            max-width: 600px;
+        }
+
+        /* সার্চ বারের ভেতরের ক্যাটাগরি ড্রপডাউন */
+        .search-category-select {
+            border: none;
+            outline: none;
+            padding: 10px 15px;
+            font-size: 14px;
+            color: #0c030bfb;
+            background-color: #eeeaea;
+            border-right: 1px solid #248d2b;
+            cursor: pointer;
+        }
+
+        /* সার্চ ইনপুট বক্স */
+        .header-search-input {
+            border: none;
+            outline: none;
+            padding: 11px 15px;
+            font-size: 14px;
+            width: 250%;
+        }
+
+        /* সার্চ আইকন বাটন */
+        .header-search-btn {
+            border: none;
+            background: none;
+            padding: 9px 20px;
+            color: #e9e9f0;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .header-search-btn:hover {
+            color: #0f0f0f;
+        }
+
+        /* ডান পাশের অ্যাকশন আইকনগুলো */
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+
+        .action-item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #0c0c0c;
+            font-size: 13px;
+            font-family: Arial, sans-serif;
+            cursor: pointer;
+        }
+
+        .action-item i {
+            font-size: 22px;
+            color: #0a0a0a; /* আইকন কালার সবুজ */
+            margin-bottom: 6px;
+        }
+
+        /* আইকনের মাথার ওপর ছোট নোটিফিকেশন বৃত্ত (ব্যাজ) শুরু*/
+        .action-badge {
+            position: absolute;
+            top: -7px;
+            right: 12px;
+            background-color: #319433;
+            color: #f1ecec;
+            font-size: 12px;
+            font-weight: bold;
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #916491;
+
+        /* আইকনের মাথার ওপর ছোট নোটিফিকেশন বৃত্ত (ব্যাজ) শেষ*/
+        
+        }
+
+        /* ==========================================================================
+           ২. ল্যাঙ্গুয়েজ সুইচারের CSS
+           ========================================================================== */
+        .top-bar {
+            width: 98%;
+            max-width: 90%;
+            margin: 10px auto 0;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 20px;
+            box-sizing: border-box;
+        }
+        .language-switcher {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid #f0ecf0;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            background-color: #d9d0d0;
+            position: relative;
+        }
+        .language-switcher img {
+            width: 20px;
+            height: auto;
+            display: block;
+        }
+        .language-switcher .arrow {
+            font-size: 10px;
+            color: #0f0e0e;
+        }
+        /* এই Comment দেখে বোঝায় এটা CSS Comment এর জন্য এটা হোল বাসা সেঞ্জ করার কোড এখন থেকে শুরু লুকানোর জন্য */
+    .language-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: #f1ecec;
+            border: 1px solid hsl(0, 88%, 50%);
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(240, 5, 5, 0.1);
+            min-width: 100px;
+            z-index: 100;
+        }
+        .language-dropdown button {
+            color: #3e9c1a;
+            padding: 8px 12px;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            border: none;
+            background: none;
+            text-align: left;
+            cursor: pointer;
+            font-size: 14px;
+
+/* এর এখানে সেষ ওকে */
+
+        }
+        .language-dropdown button:hover {
+            background-color: #100c0c;
+        }
+        .language-switcher:hover .language-dropdown {
+            display: block;
+        }
+
+        /* গুগল ট্রান্সলেটরের বার লুকানোর জন্য */
+        #google_translate_element {
+            display: none;
+        }
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+        }
+        body {
+            top: 0px !important;
+        }
+
+        /* ==========================================================================
+           ৩. মেইন বডি ও প্রোডাক্ট কার্ড সেকশন
+           ========================================================================== */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ecebef;
+        }
+
+        .banner {
+            width: 88%;
+            max-width: 100%;
+            height: 450px;
+            border: 1px dashed #ed1a07;
+            background-color: #cac4c4;
+            margin: 20px auto;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: #0fc4d8;
+        }
+
+        h1, p {
+            text-align: center;
+            color: #000000;
+        }
+
+        .container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:50px;
+    padding:98px;
+    width:98%;
+    margin:auto;
+    box-sizing:border-box;
+}
+
+        /* 🔴 ৪ পাশে লাল বর্ডার সহ প্রোডাক্ট কার্ড */
+        .card{
+
+    width:100%;
+    max-width:280px;
+    min-height:380px;
+
+    background:#d4d2d2;
+
+    border:1.8px solid #b6ea09;
+
+    border-radius:12px;
+
+    padding:12px;
+
+    text-align:center;
+
+    box-sizing:border-box;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    transition:.35s ease;
+
+    /* সব সময় Shadow থাকবে */
+    box-shadow:
+    0 20px 30px rgba(0, 0, 10, 0.677);
+
+}
+
+        .card img{
+
+    width:100%;
+
+    height:150px;
+
+    object-fit:contain;
+
+    margin-bottom:10px;
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-15px);
+
+    box-shadow:0px 20px 35px rgba(0,255,100,.45);
+
+}
+.card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+.card:hover{
+
+    transform:translateY(-15px);
+
+    box-shadow:0px 20px 35px rgba(0,255,100,.45);
+
+}
+.card:hover img{
+
+    transform:scale(1.05);
+
+}
+.card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+        .card h3 {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #040303;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .old-price {
+            color: rgb(243, 5, 5);
+            text-decoration: line-through;
+            font-size: 13px;
+            margin: 5px 0;
+        }
+
+        .offer-price {
+            color: #4e29c6;
+            font-weight: bold;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .card-action-box {
+            display: flex;
+            gap: 8px;
+            margin-top: auto;
+            justify-content: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* 🔴 ৪ পাশে লাল বর্ডার সহ ড্রপডাউন বক্স */
+        .fish-cutting-select {
+            padding: 6px;
+            border-radius: 5px;
+            border:1.8px solid #a85f5f; /* লাল বর্ডার */
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            background-color: #eee8e8;
+            cursor: pointer;
+            width: 50%;
+            height: 35px;
+            box-sizing: border-box;
+        }
+
+        /* 🔴 ৪ পাশে লাল বর্ডার সহ বাটন */
+        .add-to-cart-btn{
+
+    padding:6px 10px;
+
+    border-radius:6px;
+
+    border:1.8px solid #a85f5f;
+
+    background:#00c853;
+
+    color:#fff;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    width:50%;
+
+    height:35px;
+
+    font-size:11px;
+
+}
+
+
+        .add-to-cart-btn:hover{
+
+    background:#009933;
+
+    transform:scale(1.05);
+
+}
+
+        /* স্ক্রিন জুম আউট করলেও যেন প্রতি লাইনে ঠিক ৬টি কার্ড থাকে */
+        @media (min-width: 1200px) {
+            .container {
+                grid-template-columns: repeat(6, 1fr);
+            }
+        }
+
+        /* ==========================================================================
+           ৪. ফুটার সেকশন (আলাদা আলাদা বক্স ও জোস শ্যাডো)
+           ========================================================================== */
+        .footer {
+            background-color: #3b3940; /* শ্যাডো ফোটানোর জন্য ডার্ক বেগুনি ব্যাকগ্রাউন্ড */
+            color: #0a0707;
+            padding: 50px 20px 20px;
+            margin-top: 50px;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        /* 🌟 আলাদা সাদা বক্স এবং নিচে স্পষ্ট জোস শ্যাডো (ছায়া) */
+        .footer-box {
+            flex: 1 1 300px;
+            max-width: 380px;
+            background-color: #f2eeee; /* বক্সের ভেতর সাদা */
+            color: #f70000; /* লেখার কালার কালো */
+            padding: 25px;
+            border-radius: 12px; /* ৪ কোণা গোল */
+            box-sizing: border-box;
+            
+            /* 🖤 চমৎকার থ্রিডি ড্রপ শ্যাডো ইফেক্ট */
+            box-shadow: 0px 30px 35px rgb(62, 162, 82); 
+            
+            transition: transform 0.3s ease;
+        }
+
+        /* মাউস ওপরে নিলে বক্সটি ভেসে উঠবে */
+        .footer-box:hover {
+            transform: translateY(-25px);
+
+            
+        }
+
+        .footer-box h3 {
+            color: #00c853; /* শিরোনামের কালার সবুজ */
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #052cf1;
+            display: inline-block;
+            padding-bottom: 5px;
+            font-size: 25px;
+        }
+
+        .footer-box p, .footer-box li {
+            margin: 15px 0;
+            line-height: 1.6;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .footer-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #93d60e;
+            font-size: 14px;
+            color: #ee0707;
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<body>
+
+
+    <!-- ব্যাকগ্রাউন্ডে গুগল ট্রান্সলেট কাজ করার এলিমেন্ট -->
+    <div id="google_translate_element"></div>
+
+
+    <!-- ল্যাঙ্গুয়েজ সুইচারের দৃশ্যমান বাটন -->
+    <div class="top-bar">
+        <div class="language-switcher">
+            <img id="current-flag" src="https://flagcdn.com/w20/bd.png" alt="Flag">
+            <span id="current-lang">বাংলা</span>
+            <span class="arrow">▼</span>
+            <div class="language-dropdown">
+                <!-- এই বাটনে ক্লিক করলে ভাষা পরিবর্তন হবে -->
+                <button onclick="changeLanguage('bn', 'https://flagcdn.com/w20/bd.png', 'বাংলা')">বাংলা</button>
+                <button onclick="changeLanguage('en', 'https://flagcdn.com/w20/us.png', 'English')">English</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ব্যানারের বক্স সেকশন -->
+    <div class="banner">
+        এখানে ব্যানার ইমেজটি বসবে
+    </div>
+
+
+    <h1>আমাদের ফ্রেশ কালেকশন</h1>
+    <p>তাঁজা মাছ ও মাংসের নির্ভরযোগ্য ঠিকানা</p>
+
+
+    <!-- প্রোডাক্ট কার্ড সেকশন (১২ টি কার্ড একসাথে) -->
+    <div class="container">
+       
+        <!-- কার্ড ১ -->
+        <div class="card">
+            <img src="images/chingri.jpg" alt="নদীর ডিমা চিংড়ি">
+            <h3>নদীর ডিমা চিংড়ি</h3>
+            <p class="old-price">মূল্য: ১৭০০ টাকা</p>
+            <p class="offer-price">অফার মূল্য: ১৪০০ টাকা</p>
+            <div class="card-action-box">
+                <select class="fish-cutting-select">
+                    <option>select option</option>
+                    <option value="cutting">কাটিং</option>
+                    <option value="whole">আস্ত</option>
+                    <option value="clean">ক্লিন আস্ত</option>
+                </select>
+                <button class="add-to-cart-btn">কার্ডে যোগ</button>
+            </div>
+        </div>
+
+
+        <!-- কার্ড ২ -->
+        <div class="card">
+            <img src="golda.webp" alt="গলদা চিংড়ি">
+            <h3>গলদা চিংড়ি</h3>
+            <p class="old-price">মূল্য: ১৭০০ টাকা</p>
+            <p class="offer-price">অফার মূল্য: ১৫০০ টাকা</p>
+            <div class="card-action-box">
+                <select class="fish-cutting-select">
+                    <option>select option</option>
+                    <option value="cutting">কাটিং</option>
+                    <option value="whole">আস্ত</option>
+                    <option value="clean">ক্লিন আস্ত</option>
+                </select>
+                <button class="add-to-cart-btn">কার্ডে যোগ</button>
+            </div>
+        </div>
+
+
+        <!-- কার্ড ৩ -->
+        <div class="card">
+            <img src="deshi puti.webp" alt="দেশি পুটি মাছ">
+            <h3>দেশি পুটি মাছ</h3>
+            <p class="old-price">মূল্য: ৮০০ টাকা</p>
+            <p class="offer-price">অফার মূল্য: ৭০০ টাকা</p>
+            <div class="card-action-box">
+                <select class="fish-cutting-select">
+                    <option>select option</option>
+                    <option value="cutting">কাটিং</option>
+                    <option value="whole">আস্ত</option>
+                    <option value="clean">ক্লিন আস্ত</option>
+                </select>
+                <button class="add-to-cart-btn">কার্ডে যোগ</button>
+            </div>
+        </div>
+
+
+        <!-- CARD 4 -->
+        <div class="card">
+            <img src="deshi pabda.webp" alt="দেশি পাবদা">
+            <h3>দেশি পাবদা</h3>
+            <p class="old-price">মূল্য: ৯০০ টাকা</p>
+            <p class="offer-price">অফার মূল্য: ৮৫০ টাকা</p>
+            <div class="card-action-box">
+                <select class="fish-cutting-select">
+                    <option>select option</option>
+                    <option value="cutting">কাটিং</option>
+                    <option value="whole">আস্ত</option>
+                    <option value="clean">ক্লিন আস্ত</option>
+                </select>
+                <button class="add-to-cart-btn">কার্ডে যোগ</button>
+            </div>
+        </div>
+
+
+        <!-- CARD 5 -->
+        <div class="card">
+            <img src="ilish.webp" alt="পদ্মার ইলিশ মাছ">
+            <h3>পদ্মার ইলিশ মাছ</h3>
+            <p class="old-price">মূল্য: ২১৫০ টাকা</p>
+            <p class="offer-price">অফার মূল্য: ১৯০০ টাকা</p>
+            <div class="card-action-box">
+                <select class="fish-cutting-select">
+                    <option>select option</option>
+                    <option value="cutting">কাটিং</option>
+                    <option value="whole">আস্ত</option>
+                    <option value="clean">ক্লিন আস্ত</option>
+                </select>
+                <button class="add-to-cart-btn">কার্ডে যোগ</button>
+            </div>
+        </div>
+
+
+        <!-- CARD 6 -->
+        <div class="card">
+            <img src="kajoli.webp" alt="নদীর কাজলি মাছ">
+            <h3>নদীর কাজলি মাছ</h3>
+            <p class="old-price">মূল্য: ২০০০ টাকা</p>
+            <p class="offer-price">অফার মূল্য: ১৭০০ টাকা</p>
+            <div class="card-action-box">
+                <select class="fish-cutting-select">
+                    <option>select option</option>
+                    <option value="cutting">কাটিং</option>
+                    <option value="whole">আস্ত</option>
+                    <option value="clean">ক্লিন আস্ত</option>
+                </select>
+                <button class="add-to-cart-btn">কার্ডে যোগ</button>
+            </div>
+        </div>
+
+
+        <!-- CARD 7 -->
+        <div class="card">
+            <img src="chot kkk.webp" alt="ছোট সজবি চিংড়ি">
+            <h3>ছোট সজবি চিংড়ি</h3>
+            <p class="old-price">মূল্য: ১১০০ টাকা</p>
+            <p class="offer-price">অফার মূল্য: ১০০০ টাকা</p>
+            <div class="card-action-box">
+                <select class="fish-cutting-select">
+                    <option>select option</option>
+                    <option value="cutting">কাটিং</option>
+                    <option value="whole">আস্ত</option>
+                    <option value="clean">ক্লিন আস্ত</option>
+                </select>
+                <button class="add-to-cart-btn">কার্ডে যোগ</button>
+            </div>
+        </div>
+
+
+        <!-- CARD 8 -->
+        <div class="card">
+            <img src="rida.webp" alt="নদীর রিডা মাছ">
+            <h3>নদীর রিডা মাছ</h3>
+            <p class="old-price">মূল্য: ১৫০০ টাকা</p>
+            <p class="offer-price">অফার মূল্য: ১৪০০ টাকা</p>
+            <div class="card-action-box">
+                <select class="fish-cutting-select">
+                    <option>select option</option>
+                    <option value="cutting">কাটিং</option>
+                    <option value="whole">আস্ত</option>
+                    <option value="clean">ক্লিন আস্ত</option>
+                </select>
+                <button class="add-to-cart-btn">কার্ডে যোগ</button>
+            </div>
+        </div>
+
+
+        <!-- CARD 9 -->
+        <div class="card">
+            <img src="rupcada.webp" alt="সামুদ্রিক রূপচাদা মাছ">
+            <h3>সামুদ্রিক রূপচাদা মাছ</h3>
+            <p class="old-price">মূল্য: ২০০০ টাকা</p>
+            <p class="offer-price">অফার মূল্য: ১৮০০ টাকা</p>
+            <div class="card-action-box">
+                <select class="fish-cutting-select">
+                    <option>select option</option>
+                    <option value="cutting">কাটিং</option>
+                    <option value="whole">আস্ত</option>
+                    <option value="clean">ক্লিন আস্ত</option>
+                </select>
+                <button class="add-to-cart-btn">কার্ডে যোগ</button>
+            </div>
+        </div>
+
+
+        <!-- CARD 10 -->
+        <div class="card">
+            <img src="kima1.webp" alt="গরুর কিমা">
+            <h3>গরুর কিমা</h3>
+            <p class="old-price">মূল্য: ১৫০০ টাকা</p>
+            <p class="offer-price">অফার মূল্য: ১৪০০ টাকা</p>
+            <div class="card-action-box">
+                <select class="fish-cutting-select">
+                    <option>select option</option>
+                    <option value="cutting">কাটিং</option>
+                    <option value="whole">আস্ত</option>
+                    <option value="clean">ক্লিন আস্ত</option>
+                </select>
+                <button class="add-to-cart-btn">কার্ডে যোগ</button>
+            </div>
+        </div>
+
+
+        <!-- CARD 11 -->
+        <div class="card">
+            <img src="kima00.webp" alt="চিকেন কিমা">
+            <h3>চিকেন কিমা</h3>
+            <p class="old-price">মূল্য: ৭৫০০ টাকা</p>
+            <p class="offer-price">অফার মূল্য: ৬৫০ টাকা</p>
+            <div class="card-action-box">
+                <select class="fish-cutting-select">
+                    <option>select option</option>
+                    <option value="cutting">কাটিং</option>
+                    <option value="whole">আস্ত</option>
+                    <option value="clean">ক্লিন আস্ত</option>
+                </select>
+                <button class="add-to-cart-btn">কার্ডে যোগ</button>
+            </div>
+        </div>
+
+
+        <!-- CARD 12 -->
+        <div class="card">
+            <img src="khashi.webp" alt="ফ্রেশ কাশির মাংস">
+            <h3>ফ্রেশ কাশির মাংস</h3>
+            <p class="old-price">মূল্য: ১৪০০ টাকা</p>
+            <p class="offer-price">অফার মূল্য: ১৩০০ টাকা</p>
+            <div class="card-action-box">
+                <select class="fish-cutting-select">
+                    <option>select option</option>
+                    <option value="cutting">কাটিং</option>
+                    <option value="whole">আস্ত</option>
+                    <option value="clean">ক্লিন আস্ত</option>
+                </select>
+                <button class="add-to-cart-btn">কার্ডে যোগ</button>
+            </div>
+        </div>
+
+
+    </div> <!-- কন্টেইনার শেষ -->
+
+
+<div class="footer">
+    <div class="footer-container">
+        
+        <div class="footer-box">
+            <h3>যোগাযোগ করুন</h3>
+            <p>📍 <strong>ঠিকানা:</strong>বাড়ি নং-৪৫৫, ১ম তলা, ফরাজীভিলা, চেয়ারম্যান গলি, বাড্ডা মসজিদ রোড, ঢাকা। বসুন্ধরা আবাসিক এলাকার ডাচ-বাংলা গেটের পাশে, ডাচ-বাংলা ব্যাংকের পিছনে। ঢাকা, বাংলাদেশ</p>
+            <p>📞 <strong>ফোন:</strong> 01339575019</p>
+            <p>💬 <strong>হোয়াটসঅ্যাপ:</strong> 01606233553</p>
+            <p>✉️ <strong>ইমেইল:</strong> omorfarukqwerty58@gmail.com</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>ডেলিভারি ও সময়</h3>
+            <p>⏰ <strong>অফিস ওপেন টাইম:</strong> সকাল ৮টা</p>
+            <p>🌙 <strong>অফিস অফডিউটি:</strong> রাত ১১টা</p>
+            <p>🏍️ <strong>ডেলিভারি সময়:</strong> দুপুর ১টা থেকে সন্ধ্যা ৬-৭টা পর্যন্ত। এর আগে বা পরে ডেলিভারি হয় না।</p>
+            <p>🚩 ঢাকা সিটিতে সম্পূর্ণ ক্যাশ অন ডেলিভারি।</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>পেমেন্ট মেথড</h3>
+            <p>📱 <strong>বিকাশ:</strong> 01806233553</p>
+            <p>📱 <strong>নগদ:</strong> 01686470722</p>
+            <p>📱 <strong>রকেট:</strong> 01686470722</p>
+            <p>💵 ক্যাশ অন ডেলিভারি সুবিধা রয়েছে।</p>
+        </div>
+
+
+
+<div class="footer-box">
+    <h3>আমাদের প্রিয় সঙ্গীত</h3>
+    <p>আমাদের ওয়েবসাইট ব্রাউজ করার সময় চমৎকার এই গানটি উপভোগ করুন।</p>
+    
+    <div class="footer-video-wrapper">
+        <iframe src="https://www.youtube-nocookie.com/embed/z5pq8q_L9ic?rel=0&modestbranding=1" 
+                title="YouTube video player" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+    </div>
+</div>
+
+
+
+
+    </div>
+
+    <div class="footer-bottom">
+        <p><h3>© 2026 Fresh Fish Shop | সব অধিকার সংরক্ষিত</h3></p>
+    </div>
+</div>
+<!-- 🌐 এই কোডটুকু ফাইলের একদম নিচে </body> 
+    <div id="google_translate_element" style="display:none;"></div>
+   
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'bn',
+                includedLanguages: 'en,bn',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+
+        function changeLanguage(langCode, flagUrl, langName) {
+            var select = document.querySelector('.goog-te-combo');
+            if (select) {
+                select.value = langCode;
+                select.dispatchEvent(new Event('change'));
+               
+                document.getElementById('current-flag').src = flagUrl;
+                document.getElementById('current-lang').innerText = langName;
+            }
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
+

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <title>Fresh Fish Shop - লগইন ও রেজিস্ট্রেশন</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #60538b; /* আপনার ওয়েবসাইটের থিম বেগুনি কালার */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .auth-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            width: 380px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        /* 🔄 লগইন ও রেজিস্টার সুইচার বাটন দুটি */
+        .tab-buttons {
+            display: flex;
+            background-color: #f1f1f1;
+            border-radius: 50px;
+            padding: 5px;
+            margin-bottom: 25px;
+            border: 1px solid #ddd;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            background: none;
+            font-size: 15px;
+            font-weight: bold;
+            color: #555;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: 0.3s ease;
+        }
+
+        /* একটিভ বাটনের জোস সবুজ কালার */
+        .tab-btn.active {
+            background-color: #00c853;
+            color: white;
+            box-shadow: 0 2px 8px rgba(0, 200, 83, 0.3);
+        }
+
+        /* ইনপুট ফিল্ডের ডিজাইন */
+        .auth-form {
+            display: none; /* শুরুতে ফর্মগুলো হাইড থাকবে, জাভাস্ক্রিপ্ট দিয়ে শো হবে */
+        }
+
+        .auth-form.active {
+            display: block; /* শুধু একটিভ ফর্মটি দেখা যাবে */
+        }
+
+        .auth-form h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 22px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e7e1e1;
+            border-radius: 8px;
+            font-size: 14px;
+            box-sizing: border-box;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        /* ইনপুটে ক্লিক করলে বর্ডার সবুজ হবে */
+        .input-group input:focus {
+            border-color: #00c853;
+        }
+
+        /* বড় সাবমিট বাটন */
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #00c853;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+            box-shadow: 0 4px 10px rgba(0, 200, 83, 0.2);
+        }
+
+        .submit-btn:hover {
+            background-color: #00963e;
+        }
+
+        /* নিচের ব্যাক লিঙ্ক */
+        .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            color: #60538b;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .back-home:hover {
+            color: #4a3e70;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="auth-container">
+        
+        <div class="tab-buttons">
+            <button class="tab-btn active" onclick="switchForm('login-form', this)">লগইন</button>
+            <button class="tab-btn" onclick="switchForm('register-form', this)">রেজিস্টার</button>
+        </div>
+
+        <form id="login-form" class="auth-form active" onsubmit="event.preventDefault();">
+            <h2>লগইন করুন</h2>
+            <div class="input-group">
+                <input type="text" placeholder="মোবাইল নম্বর বা ইমেইল" required>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="পাসওয়ার্ড" required>
+            </div>
+            <button type="submit" class="submit-btn">প্রবেশ করুন</button>
+        </form>
+
+        <form id="register-form" class="auth-form" onsubmit="event.preventDefault();">
+            <h2>নতুন অ্যাকাউন্ট তৈরি</h2>
+            <div class="input-group">
+                <input type="email" placeholder="আপনার ইমেইল ঠিকানা" required>
+            </div>
+            <div class="input-group">
+                <input type="tel" placeholder="আপনার মোবাইল নম্বর" required>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="নতুন পাসওয়ার্ড" required>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="পাসওয়ার্ড নিশ্চিত করুন" required>
+            </div>
+            <button type="submit" class="submit-btn">রেজিস্ট্রেশন সম্পন্ন করুন</button>
+        </form>
+
+        <a href="Index.html" class="back-home">← হোম পেজে ফিরে যান</a>
+
+    </div>
+
+    <script>
+        function switchForm(formId, buttonElement) {
+            // সব ফর্ম হাইড করো
+            const forms = document.querySelectorAll('.auth-form');
+            forms.forEach(form => form.classList.remove('active'));
+            
+            // সব বাটন থেকে একটিভ ক্লাস সরাও
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // নির্দিষ্ট ফর্ম ও বাটন একটিভ করো
+            document.getElementById(formId).classList.add('active');
+            buttonElement.classList.add('active');
+        }
+
+        // 🌟 রেজিস্ট্রেশন ফর্মে ক্লিক করলে মেইন পেজে নিয়ে যাওয়ার লজিক
+        document.getElementById('register-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // পেজ রিলোড বন্ধ করবে
+            
+            // এখানে চাইলে একটা সফলতার মেসেজ দেখাতে পারেন
+            alert('আপনার রেজিস্ট্রেশন সফল হয়েছে!'); 
+            
+            // সরাসরি আপনার মেইন পেজে (Index.html) নিয়ে যাবে
+            window.location.href = 'Index.html'; 
+        });
+
+        // 🌟 লগইন ফর্মে ক্লিক করলেও যাতে মেইন পেজে নিয়ে যায় (ঐচ্ছিক)
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = 'Index.html';
+        });
+    </script>
+
+
+</body>
+</html>
